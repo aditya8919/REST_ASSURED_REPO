@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-08T20:05:06 IST" name="Default suite" finished-at="2025-06-08T20:05:26 IST" duration-ms="20012">
+  <suite started-at="2025-06-08T20:15:15 IST" name="Default suite" finished-at="2025-06-08T20:15:42 IST" duration-ms="26813">
     <groups>
     </groups>
-    <test started-at="2025-06-08T20:05:06 IST" name="Default test" finished-at="2025-06-08T20:05:26 IST" duration-ms="20012">
+    <test started-at="2025-06-08T20:15:15 IST" name="Default test" finished-at="2025-06-08T20:15:42 IST" duration-ms="26813">
       <class name="testSuite.API_TestSuite">
-        <test-method is-config="true" signature="inItTest()[pri:0, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:05 IST" name="inItTest" finished-at="2025-06-08T20:05:06 IST" duration-ms="659" status="PASS">
+        <test-method is-config="true" signature="inItTest()[pri:0, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:15 IST" name="inItTest" finished-at="2025-06-08T20:15:15 IST" duration-ms="414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inItTest -->
-        <test-method signature="verifyPostCall()[pri:1, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:06 IST" name="verifyPostCall" finished-at="2025-06-08T20:05:13 IST" duration-ms="6860" status="PASS">
+        <test-method signature="verifyPostCall()[pri:1, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:15 IST" name="verifyPostCall" finished-at="2025-06-08T20:15:25 IST" duration-ms="10012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPostCall -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:13 IST" name="tearDown" finished-at="2025-06-08T20:05:13 IST" duration-ms="408" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:25 IST" name="tearDown" finished-at="2025-06-08T20:15:26 IST" duration-ms="453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="verifyGetCall()[pri:2, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:13 IST" name="verifyGetCall" finished-at="2025-06-08T20:05:17 IST" duration-ms="3361" status="PASS">
+        <test-method signature="verifyGetCall()[pri:2, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:26 IST" name="verifyGetCall" finished-at="2025-06-08T20:15:29 IST" duration-ms="3542" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGetCall -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:17 IST" name="tearDown" finished-at="2025-06-08T20:05:17 IST" duration-ms="38" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:29 IST" name="tearDown" finished-at="2025-06-08T20:15:29 IST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="verifyPutCall()[pri:3, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:17 IST" name="verifyPutCall" finished-at="2025-06-08T20:05:20 IST" duration-ms="3053" status="PASS">
+        <test-method signature="verifyGetAllBookingIds()[pri:3, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:29 IST" name="verifyGetAllBookingIds" finished-at="2025-06-08T20:15:33 IST" duration-ms="3471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetAllBookingIds -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:33 IST" name="tearDown" finished-at="2025-06-08T20:15:33 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="verifyPutCall()[pri:4, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:33 IST" name="verifyPutCall" finished-at="2025-06-08T20:15:36 IST" duration-ms="2900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPutCall -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:20 IST" name="tearDown" finished-at="2025-06-08T20:05:20 IST" duration-ms="97" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:36 IST" name="tearDown" finished-at="2025-06-08T20:15:36 IST" duration-ms="41" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="verifyPatchCall()[pri:4, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:20 IST" name="verifyPatchCall" finished-at="2025-06-08T20:05:23 IST" duration-ms="2952" status="PASS">
+        <test-method signature="verifyPatchCall()[pri:5, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:36 IST" name="verifyPatchCall" finished-at="2025-06-08T20:15:39 IST" duration-ms="3024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPatchCall -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:23 IST" name="tearDown" finished-at="2025-06-08T20:05:23 IST" duration-ms="50" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:39 IST" name="tearDown" finished-at="2025-06-08T20:15:39 IST" duration-ms="84" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="verifyDeleteCall()[pri:5, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:23 IST" name="verifyDeleteCall" finished-at="2025-06-08T20:05:26 IST" duration-ms="3019" status="PASS">
+        <test-method signature="verifyDeleteCall()[pri:6, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:39 IST" name="verifyDeleteCall" finished-at="2025-06-08T20:15:42 IST" duration-ms="3069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDeleteCall -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@3c41ed1d]" started-at="2025-06-08T20:05:26 IST" name="tearDown" finished-at="2025-06-08T20:05:26 IST" duration-ms="82" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testSuite.API_TestSuite@54d9d12d]" started-at="2025-06-08T20:15:42 IST" name="tearDown" finished-at="2025-06-08T20:15:42 IST" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -33,8 +33,9 @@ public class API_Calls extends BaseClass
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getAllBookingIds()
+	public boolean getAllBookingIds()
 	{
+		boolean testResult = false;
 		try
 		{
 			String basePath = ConfigHelper.readProperty("getAllBookingsBaePath");
@@ -43,46 +44,56 @@ public class API_Calls extends BaseClass
 
 			ValidatableResponse response = given().spec(reqSpec).when().get().then().spec(respSpec);
 
-			Response resp = response.extract().response();
+			if(response != null)
+			{
+				ExtentReportsHelper.LogPass("Retrieved all booking id's.");
+				testResult = true;
+				
+				Response resp = response.extract().response();
 
-			System.out.println("Full response as String : ");
-			System.out.println();
+				System.out.println("Full response as String : ");
+				System.out.println();
 
-			System.out.println(resp.asPrettyString());
+				System.out.println(resp.asPrettyString());
 
-//			System.out.println("JSON PATH");
-//			System.out.println();
+//				System.out.println("JSON PATH");
+//				System.out.println();
 
-//			JsonPath jsonPathBody = resp.getBody().jsonPath(); 
-//			System.out.println(jsonPathBody.getInt("totalprice"));
-//			System.out.println(jsonPathBody.getString("firstname"));
-//			Object jsonObjFromResponse = jsonPathBody.obj
+//				JsonPath jsonPathBody = resp.getBody().jsonPath(); 
+//				System.out.println(jsonPathBody.getInt("totalprice"));
+//				System.out.println(jsonPathBody.getString("firstname"));
+//				Object jsonObjFromResponse = jsonPathBody.obj
 
-			System.out.println("Full response as JSON Array print");
-			System.out.println();
+				System.out.println("Full response as JSON Array print");
+				System.out.println();
 
-			JsonArray dd = CommonFunctions.converResponseStringToJsonArray(resp.asPrettyString());
+				JsonArray dd = CommonFunctions.converResponseStringToJsonArray(resp.asPrettyString());
 
-			System.out.println(dd);
+				System.out.println(dd);
 
-			JsonElement ele = dd.get(0);
+				JsonElement ele = dd.get(0);
 
-			JsonArray respJsonArray = CommonFunctions.converResponseStringToJsonArray(resp.prettyPrint());
+				JsonArray respJsonArray = CommonFunctions.converResponseStringToJsonArray(resp.prettyPrint());
 
-			JsonObject firstJsonObj = respJsonArray.get(0).getAsJsonObject();
+				JsonObject firstJsonObj = respJsonArray.get(0).getAsJsonObject();
 
-			int firstBookingId = firstJsonObj.get("bookingid").getAsInt();
+				int firstBookingId = firstJsonObj.get("bookingid").getAsInt();
 
-			System.out.println("firstBookingId : " + firstBookingId);
-			return firstBookingId;
+				System.out.println("firstBookingId : " + firstBookingId);
+			}
+			else
+			{
+				ExtentReportsHelper.LogFail("Failed to retrieve all booking id's.");
+			}
+
+			return testResult;
 
 		}
 		catch (Exception ex)
 		{
-			System.out.println("Exception occurred while getting all bookings: " + ex.getMessage());
+			ExtentReportsHelper.LogFail("Exception occurred while getting all bookings: " + ex.getMessage());
 			ex.printStackTrace();
-
-			return -1;
+			return false;
 		}
 	}
 

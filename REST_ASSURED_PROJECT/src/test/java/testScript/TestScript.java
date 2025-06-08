@@ -59,6 +59,33 @@ public class TestScript
 		return flag;
 	}
 	
+	public boolean verifyGetAllBookings()
+	{
+		boolean flag = false;
+
+		try
+		{
+			if (AllObjects.api_Calls().getAllBookingIds())
+			{
+				ExtentReportsHelper.LogPass("All booking details retrieved.");
+				flag = true;
+			} 
+			else
+			{
+				ExtentReportsHelper.LogFail("Failed to retrieve all booking details.");
+			}
+		}
+		catch (Exception e)
+		{
+			ExtentReportsHelper.LogFail("Exception in method : verifyGetAllBookings : "+e.getMessage());
+			e.printStackTrace();
+			return false;
+		}
+		
+		return flag;
+	}
+	
+	
 	public boolean updateBooking()
 	{
 		boolean flag = false;
