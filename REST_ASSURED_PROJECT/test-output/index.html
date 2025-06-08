@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1166553170\testng-customsuite.xml</span>
+                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse--2119901249\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testpack2.GetCalls" class="method navigator-link" hash-for-method="getBookingDetailsById">getBookingDetailsById</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="testSuite.API_TestSuite" class="method navigator-link" hash-for-method="verifyDeleteCall">verifyDeleteCall</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testSuite.API_TestSuite" class="method navigator-link" hash-for-method="verifyGetCall">verifyGetCall</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testSuite.API_TestSuite" class="method navigator-link" hash-for-method="verifyPatchCall">verifyPatchCall</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testSuite.API_TestSuite" class="method navigator-link" hash-for-method="verifyPostCall">verifyPostCall</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testSuite.API_TestSuite" class="method navigator-link" hash-for-method="verifyPutCall">verifyPutCall</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +141,42 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testpack2.GetCalls</span>
+              <span class="class-name">testSuite.API_TestSuite</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getBookingDetailsById">
-                  </a> <!-- getBookingDetailsById -->
-                  <span class="method-name">getBookingDetailsById</span>
+                  <a name="verifyDeleteCall">
+                  </a> <!-- verifyDeleteCall -->
+                  <span class="method-name">verifyDeleteCall</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyGetCall">
+                  </a> <!-- verifyGetCall -->
+                  <span class="method-name">verifyGetCall</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPatchCall">
+                  </a> <!-- verifyPatchCall -->
+                  <span class="method-name">verifyPatchCall</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPostCall">
+                  </a> <!-- verifyPostCall -->
+                  <span class="method-name">verifyPostCall</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPutCall">
+                  </a> <!-- verifyPutCall -->
+                  <span class="method-name">verifyPutCall</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +184,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1166553170\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse--2119901249\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +193,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testpack2.GetCalls&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;getBookingDetailsById&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testpack2.GetCalls --&gt;
+      &lt;class name=&quot;testSuite.API_TestSuite&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,16 +233,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getBookingDetailsById')
-data.setCell(0, 2, 'testpack2.GetCalls')
-data.setCell(0, 3, 5540);
+data.setCell(0, 1, 'verifyPostCall')
+data.setCell(0, 2, 'testSuite.API_TestSuite')
+data.setCell(0, 3, 6860);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyGetCall')
+data.setCell(1, 2, 'testSuite.API_TestSuite')
+data.setCell(1, 3, 3361);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyPutCall')
+data.setCell(2, 2, 'testSuite.API_TestSuite')
+data.setCell(2, 3, 3053);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyDeleteCall')
+data.setCell(3, 2, 'testSuite.API_TestSuite')
+data.setCell(3, 3, 3019);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyPatchCall')
+data.setCell(4, 2, 'testSuite.API_TestSuite')
+data.setCell(4, 3, 2952);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -224,11 +284,51 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testpack2.GetCalls</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">getBookingDetailsById</span>
+              <div class="chronological-class-name">testSuite.API_TestSuite</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">inItTest</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">verifyPostCall</span>
+                <span class="method-start">721 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">7586 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyGetCall</span>
+                <span class="method-start">7998 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11364 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyPutCall</span>
+                <span class="method-start">11405 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14462 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyPatchCall</span>
+                <span class="method-start">14560 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">17516 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyDeleteCall</span>
+                <span class="method-start">17568 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">20591 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

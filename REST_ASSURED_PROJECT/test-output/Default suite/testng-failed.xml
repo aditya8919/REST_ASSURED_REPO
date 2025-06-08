@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpack2.GetCalls">
+      <class name="testSuite.API_TestSuite">
         <methods>
-          <include name="getBookingDetailsById"/>
+          <include name="tearDown"/>
+          <include name="inItTest"/>
+          <include name="verifyGetCall"/>
+          <include name="verifyPostCall"/>
+          <include name="verifyPutCall"/>
+          <include name="verifyPatchCall"/>
+          <include name="verifyDeleteCall"/>
         </methods>
-      </class> <!-- testpack2.GetCalls -->
+      </class> <!-- testSuite.API_TestSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

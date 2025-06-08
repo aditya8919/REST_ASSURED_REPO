@@ -1,18 +1,19 @@
-package testpack1;
+package testpack2;
 
 import static io.restassured.RestAssured.given;
 
-import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
-import com.google.gson.Gson;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import groovy.json.JsonParser;
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
+import utilities.ResponseHelper;
 
-public class GetCalls
+public class GetCallsOld
 {
 
 	/**
@@ -28,7 +29,6 @@ public class GetCalls
 					.body("{\"username\":\"admin\",\"password\":\"password123\"}").when().post().then().statusCode(200);
 //						.log().all();
 			 String resp = response.extract().response().asString();
-			 
 			 
 
 			return response.extract().path("token");
@@ -51,16 +51,9 @@ public class GetCalls
 					.statusCode(200);
 
 			Response resp = response.extract().response();
+
+			System.out.println(resp.asString());
 			
-			System.out.println(resp.asPrettyString());
-			
-			System.out.println("JSON PATH");
-			System.out.println();
-			
-			JsonPath jsonPathBody = resp.getBody().jsonPath(); 
-//			System.out.println(jsonPathBody.getInt("totalprice"));
-//			System.out.println(jsonPathBody.getString("firstname"));
-//			Object jsonObjFromResponse = jsonPathBody.obj
 		}
 		catch (Exception ex)
 		{
@@ -74,43 +67,30 @@ public class GetCalls
 	 * 
 	 * @param id The booking ID to retrieve details for.
 	 */
-	public static void getBookingDetailsById(int id)
+	
+	@Test
+	public static void getBookingDetailsById()
 	{
+		int id = 1;
 		String url = "https://restful-booker.herokuapp.com/booking/" + id;
 
 		 Response resp = given().baseUri(url).header("Content-Type", "application/json").header("Accept", "application/json")
 				.header("Authorization", "Bearer " + getAuthToken())
-				.when().get()
-				.then().extract().response();
-		
-		 System.out.println("Response body is : ");
-		 
-		  String respBody = resp.getBody().asPrettyString();
-		 System.out.println();
-		 
-		 
-			System.out.println("JSON PATH");
-			System.out.println();
-			
-			JsonPath jsonPathBody = resp.getBody().jsonPath(); 
-			System.out.println(jsonPathBody.getInt("totalprice"));
-			System.out.println(jsonPathBody.getString("firstname"));
-			Object jsonObjFromResponse = jsonPathBody.getJsonObject(url);
-			
-			System.out.println();
-			System.out.println("***** USING GSON *****");
-			System.out.println();
-			
-			Gson gson = new Gson();
-			
-			 Map<String, Object> gsonParse = gson.fromJson(respBody, Map.class);
-			 
-			 gsonParse.get("totalprice");
-			 gsonParse.get("firstname");
-			 
-			
-//		System.out.println("Booking details for ID " + id + " retrieved successfully.");
+		.when().get()
+		.then().extract().response();
 
+//		Assert.assertEquals(resp.getStatusCode(), 200);
+//		Assert.assertEquals(resp.getStatusLine(), "HTTP/1.1 200 OK");
+//		Assert.assertEquals(resp.header("Server"), "Heroku");
+//		Assert.assertTrue(resp.timeIn(TimeUnit.MILLISECONDS) < 2000, "Response time is greater than 2000 MS");
+		
+		 
+		 ResponseHelper.verifyStatusCode(resp, 200);
+		 ResponseHelper.verifyStatusLine(resp, "OK");
+		 ResponseHelper.isResponseTimeLessThan(resp, 2000);
+		 ResponseHelper.verifyHeaderValue(resp, "Server", "Heroku");
+		 
+		System.out.println("Booking details for ID " + id + " retrieved successfully.");
 	}
 
 	/**
@@ -131,6 +111,8 @@ public class GetCalls
 		System.out.println("Booking created successfully with ID : " + resp.extract().path("bookingid"));
 
 		return resp.extract().path("bookingid");
+		
+		
 	}
 
 	/**
@@ -178,34 +160,34 @@ public class GetCalls
 		System.out.println("Booking with ID " + id + " deleted successfully.");
 	}
 
-	public static void main(String[] args) throws InterruptedException
-	{
+//	public static void main(String[] args) throws InterruptedException
+//	{
 
-		System.setProperty("javax.net.ssl.trustStore", "truststore.jks");
-		System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
-
-		RestAssured.useRelaxedHTTPSValidation(); // disables SSL cert validation (testing only)
-
-//		System.out.println(getAuthToken());
-
-		System.out.println();
-		System.out.println("***** getAllBooking ******");
-		System.out.println();
-
-		getAllBookingIds();
-
-		System.out.println();
-		System.out.println("***** getBookingDetailsById ******");
-		System.out.println();
-
-		getBookingDetailsById(1);
-
+//		System.setProperty("javax.net.ssl.trustStore", "truststore.jks");
+//		System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
+//
+//		RestAssured.useRelaxedHTTPSValidation(); // disables SSL cert validation (testing only)
+//
+////		System.out.println(getAuthToken());
+//
+//		System.out.println();
+//		System.out.println("***** getAllBooking ******");
+//		System.out.println();
+//
+//		getAllBookingIds();
+//
+//		System.out.println();
+//		System.out.println("***** getBookingDetailsById ******");
+//		System.out.println();
+//
+//		getBookingDetailsById(1);
+//
 //		System.out.println();
 //		System.out.println("***** createBooking ******");
 //		System.out.println();
 //
 //		int bookingId = createBooking();
-//
+
 //		Thread.sleep(2000);
 //
 //		System.out.println();
@@ -232,6 +214,6 @@ public class GetCalls
 //
 //		getBookingDetailsById(bookingId);
 
-	}
+//	}
 
 }
