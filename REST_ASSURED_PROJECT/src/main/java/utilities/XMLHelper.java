@@ -21,7 +21,7 @@ public class XMLHelper
 		String nodeValue = null;
 		try
 		{
-			File xmlFile = new File("C:\\Users\\DELL\\git\\REST_ASSURED_REPO\\REST_ASSURED_PROJECT\\RuntimeTestData.xml");
+			File xmlFile = new File(ProjectPaths.runtimeXMlfilePath);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(xmlFile);
@@ -54,7 +54,7 @@ public class XMLHelper
 	{
 		try
 		{
-			File xmlFile = new File("C:\\Users\\DELL\\git\\REST_ASSURED_REPO\\REST_ASSURED_PROJECT\\RuntimeTestData.xml");
+			File xmlFile = new File(ProjectPaths.runtimeXMlfilePath);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(xmlFile);

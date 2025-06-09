@@ -8,10 +8,9 @@
           <include name="tearDown"/>
           <include name="inItTest"/>
           <include name="verifyGetCall"/>
-          <include name="verifyPostCall"/>
+          <include name="verifyPutCall"/>
           <include name="verifyPatchCall"/>
           <include name="verifyDeleteCall"/>
-          <include name="verifyPutCall"/>
         </methods>
       </class> <!-- testSuite.API_TestSuite -->
     </classes>

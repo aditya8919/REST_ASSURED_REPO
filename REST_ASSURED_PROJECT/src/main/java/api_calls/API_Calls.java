@@ -1,4 +1,4 @@
-package testpack1;
+package api_calls;
 
 import static io.restassured.RestAssured.given;
 
@@ -18,7 +18,7 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import jsonPayload.RequestPayloadVO;
-import objectHelper.AllObjects;
+import utilities.AllObjects;
 import utilities.CommonFunctions;
 import utilities.ConfigHelper;
 import utilities.ExtentReportsHelper;

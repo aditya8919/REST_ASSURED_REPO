@@ -1,9 +1,9 @@
-package objectHelper;
+package utilities;
 
 import java.io.IOException;
 
+import api_calls.API_Calls;
 import jsonPayload.RequestPayloadHelper;
-import testpack1.API_Calls;
 
 public class AllObjects
 {

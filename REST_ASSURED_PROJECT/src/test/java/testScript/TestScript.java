@@ -1,7 +1,7 @@
 package testScript;
 
-import objectHelper.AllObjects;
-import testpack1.API_Calls;
+import api_calls.API_Calls;
+import utilities.AllObjects;
 import utilities.ExtentReportsHelper;
 import utilities.XMLHelper;
 

@@ -18,7 +18,6 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import utilities.ConfigHelper;
 import utilities.ExtentReportsHelper;
-import utilities.XMLHelper;
 
 /**
  * This class contains all functions and variables which will be used throughout
