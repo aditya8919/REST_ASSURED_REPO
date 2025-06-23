@@ -110,7 +110,8 @@ public class API_Calls extends BaseClass
 		{
 			String bookingId = XMLHelper.readData("CreateBookingId");
 			String basePath = "booking/"+bookingId;
-			RequestSpecification reqSpec = getRequestSpecification(basePath, AuthType.BEARER_TOKEN);
+			String basePath2 = XMLHelper.readData("getBookingDetailsByIdBasePath");
+			RequestSpecification reqSpec = getRequestSpecification(basePath2, AuthType.BEARER_TOKEN);
 			ResponseSpecification respSpec = getResponseSpecification(200);
 
 			Response resp = given().spec(reqSpec).when().get().then().spec(respSpec).extract().response();

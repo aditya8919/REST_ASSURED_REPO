@@ -20,8 +20,14 @@ public class SimpleApiCalls
 		{
 			String url = "https://restful-booker.herokuapp.com/auth";
 			
-			ValidatableResponse response = given().baseUri(url).header("Content-Type", "application/json")
-					.body("{\"username\":\"admin\",\"password\":\"password123\"}").when().post().then().statusCode(200);
+			ValidatableResponse response = given()
+																			.baseUri(url)
+																			.header("Content-Type", "application/json")
+																			.body("{\"username\":\"admin\",\"password\":\"password123\"}")
+																		.when()
+																			.post()
+																		.then()
+																			.statusCode(200);
 			Response resp = response.extract().response();
 			 
 			if(utilities.ResponseHelper.verifyStatusCode(resp, 200))
@@ -76,9 +82,10 @@ public class SimpleApiCalls
 	 */
 	public static void getBookingDetailsById(int id)
 	{
-		String url = "https://restful-booker.herokuapp.com/booking/" + id;
+		String url = "https://restful-booker.herokuapp.com";
 
-		given().baseUri(url).header("Content-Type", "application/json").header("Accept", "application/json")
+		given().baseUri(url).basePath("/booking/{id}").pathParam("id", id)
+		.header("Content-Type", "application/json").header("Accept", "application/json")
 				.header("Authorization", "Bearer " + getAuthToken()).when().get().then().statusCode(200).log().all();
 
 		System.out.println("Booking details for ID " + id + " retrieved successfully.");
